@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SoundsWaveDetection</string>
+    <string name="tvMicrophone">Touch to ON the microphone</string>
+</resources>
