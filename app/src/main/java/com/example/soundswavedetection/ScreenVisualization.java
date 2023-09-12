@@ -38,8 +38,8 @@ class ScreenVisualization extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         colorScheme.shuffle();
-        canvas.drawPoint(colorScheme.CanvasPoint);
-        canvas.drawLines(colorScheme.getIndexedArray(0), colorScheme.LinePoint);
+        canvas.drawPaint(colorScheme.CanvasPoint);
+        canvas.drawLines(vectors.getIndexedArray(0), colorScheme.LinePaint);
         canvas.drawLine(widht / 2, height, widht / 2, 0, colorScheme.LinePaint);
         canvas.drawPoints(amplitudes.getIndexedArray(widht / 2), colorScheme.CirclePaint);
 

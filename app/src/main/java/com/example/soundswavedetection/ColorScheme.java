@@ -3,6 +3,8 @@ package com.example.soundswavedetection;
 import android.graphics.Color;
 import android.graphics.Paint;
 
+import java.util.Random;
+
 class ColorScheme {
 
 
@@ -23,6 +25,23 @@ class ColorScheme {
         CanvasPoint = new Paint();
         CanvasPoint.setStrokeWidth(5);
         CanvasPoint.setColor(Color.WHITE);
+    }
+
+    public void shuffle(){
+        if (colorChangeFrameSea-- >= 0){
+            return;
+        }
+        colorChangeFrameSea = COLOR_CHANGE_FRAME_RATE;
+        LinePaint.setColor(randomColor());
+        CirclePaint.setColor(randomColor());
+    }
+
+    private int randomColor() {
+        Random r = new Random();
+        int ra = r.nextInt(255);
+        int g = r.nextInt(255);
+        int b = r.nextInt(255);
+        return Color.rgb(ra,g,b);
     }
 
 }
